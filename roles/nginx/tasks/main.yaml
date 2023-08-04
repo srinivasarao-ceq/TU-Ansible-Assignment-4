@@ -1,5 +1,5 @@
 ---
-- name: Install httpd
+- name: Install nginx
   yum:
     name: nginx
     state: present
@@ -18,8 +18,8 @@
 
 - name: Copy HTML code to destination
   copy:
-    src: /home/ec2-user/app/sample-html-app/*
-    dest: /usr/share/nginx/html/
+    src: /home/ec2-user/app
+    dest: /usr/share/nginx/html
   notify: Restart Apache
 
 - name: Ensure Nginx is running
