@@ -14,7 +14,7 @@
   git:
     repo: https://github.com/srinivasarao-ceq/sample-html-app.git
     dest: /home/ec2-user/sample-html-app
-    version: master  # Replace with the branch or tag you want to deploy
+    version: main  # Replace with the branch or tag you want to deploy
 
 - name: Copy HTML code to destination
   copy:
