@@ -18,9 +18,10 @@
 
 - name: Copy HTML code to destination
   copy:
-    src: /home/ec2-user/app
+    src: /home/ec2-user/app/*
     dest: /usr/share/nginx/html
-  notify: Restart Apache
+    remote_src: yes
+  notify: Restart Nginx
 
 - name: Ensure Nginx is running
   service:
