@@ -1,0 +1,8 @@
+---
+# Default values for Nginx role
+
+# Nginx port number
+nginx_port: 80
+
+# Nginx server name
+nginx_server_name: example.com
