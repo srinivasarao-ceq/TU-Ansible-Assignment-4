@@ -18,7 +18,7 @@
 
 - name: Copy HTML code to destination
   copy:
-    src: /home/ec2-user/sample-html-app
+    src: /home/ec2-user/sample-html-app/*
     dest: /usr/share/nginx/html/
   notify: Restart Apache
 
