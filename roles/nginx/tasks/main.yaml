@@ -13,12 +13,12 @@
 - name: Clone the HTML app from GitHub
   git:
     repo: https://github.com/srinivasarao-ceq/sample-html-app.git
-    dest: /home/ec2-user
+    dest: /home/ec2-user/app
     version: main  # Replace with the branch or tag you want to deploy
 
 - name: Copy HTML code to destination
   copy:
-    src: /home/ec2-user/sample-html-app/*
+    src: /home/ec2-user/app/sample-html-app/*
     dest: /usr/share/nginx/html/
   notify: Restart Apache
 
